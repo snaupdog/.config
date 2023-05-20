@@ -35,7 +35,7 @@ vim.opt.splitbelow = true -- split horizontal window to the bottom
 
  -- vim.cmd[[colorscheme abscs]]
 
- vim.cmd[[colorscheme tokyonight-storm]]
+ vim.cmd[[colorscheme tokyonight-night]]
 
 
 
@@ -47,9 +47,13 @@ vim.keymap.set('n','<leader>n',':NvimTreeToggle<CR>')
 vim.keymap.set('n','<leader>w','<C-w>w')
 
 
+
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>]', builtin.find_files, {})
+
 local keymap = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
-local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- Better escape using jk in insert and terminal mode
 keymap("i", "jk", "<ESC>", default_opts)
