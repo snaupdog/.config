@@ -21,13 +21,10 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 
-
-       requires = {
-           'nvim-tree/nvim-web-devicons', -- optional
-       },
-     config = function()
-         require("nvim-tree").setup {}
-     end
+       --
+       -- requires = {
+       --     'nvim-tree/nvim-web-devicons', -- optional
+       -- },
 })
 
 
