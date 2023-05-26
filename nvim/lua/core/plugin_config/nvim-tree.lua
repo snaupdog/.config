@@ -8,7 +8,9 @@ vim.g.termguicolors = true
 
 -- OR setup with some options
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
+
+--nvim-tree.view.preserve_window_proportions=true,
+  -- sort_by = {"modification_time"},
   view = {
     width = 30,
   },
